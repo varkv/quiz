@@ -1,0 +1,59 @@
+.card-block, .card-block .timeline, .card-block .timeline .last-card{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.card-block .timeline .last-card .timeline-panel{
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.card-block .timeline .last-card .timeline-panel .timeline-title,
+  .card-block .timeline .last-card .timeline-panel .timeline-body p{
+  color: #fafafa;
+  background: #fafafa;
+  border-radius: 3px;
+}
+.card-block .timeline .last-card .timeline-panel .timeline-title{
+  width: 30%;
+}
+.alert{
+  color: #000;
+}
+.progress-custom {
+  margin-left: 3em;
+  height: 3px;
+}
+#quiz-timeline{
+  border: 0;
+}
+.card-title {
+  margin-top: 1rem;
+}
+
+html{
+    word-break: break-word;
+}
+
+@media (max-width: 750px) { 
+  .card{
+    padding: 0;
+  } 
+  .timeline:before{
+    left: 13px;
+  }
+  .timeline > li > .timeline-badge {   
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .timeline > li > .timeline-panel {
+    width: calc( 100% - 35px );
+  }
+  .timeline > li > .timeline-panel:before {
+    top: 14px;
+  }
+  .timeline > li > .timeline-panel:after {
+    top: 15px;
+  }
+}

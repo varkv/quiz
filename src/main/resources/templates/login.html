@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Login | Quiz</title>
+    <link rel="icon" href="images/favicon.ico" />
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="resources/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Icons -->
+    <link href="resources/assets/css/font-awesome.css" rel="stylesheet" />
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="resources/assets/css/style.css" rel="stylesheet" />
+    <link href="resources/css/style.css" rel="stylesheet" />
+    <link href="resources/css/progress.css" rel="stylesheet" />
+
+    <script src="resources/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="resources/assets/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid" id="wrapper">
+        <div class="row justify-content-md-center">
+            <div class="col col-md-6 col col-lg-5">
+                <h1>Login</h1>
+                <p th:if="${loginError}" class="error">Wrong user or password</p>
+                <form th:action="@{/login}" method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" aria-describedby="usernameHelp" placeholder="Enter username" />
+                        <small id="usernameHelp" class="form-text text-muted">If it your first time just enter any available name and we will register you.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

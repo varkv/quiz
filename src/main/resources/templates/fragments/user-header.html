@@ -1,0 +1,15 @@
+<span th:fragment="user-header">
+    <span class="navbar-text">
+        <span class="text-success" id="quiz-ws-connected">
+            <i class="fa fa-signal"></i> Connected</span>
+        <span class="text-danger" id="quiz-ws-disconnected">
+            <i class="fa fa-ban"></i> Connection lost</span>
+    </span>
+
+    <script src="resources/app/user-header.js"></script>
+    <script>
+        $(document).ready(function () {
+            window.UserHeader.init();
+        })
+    </script>
+</span>

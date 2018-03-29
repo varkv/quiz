@@ -1,0 +1,43 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet author="kirill_korol" id="insertQuestions">
+        <insert tableName="question">
+            <column name="type" value="RADIO"/>
+            <column name="name" value="Результат вызова метода work()?"/>
+            <column name="text"
+                    value="&lt;code&gt;private void work(){ try{ work(); } finally { work(); }}&lt;/code&gt;"/>
+        </insert>
+
+        <insert tableName="question">
+            <column name="type" value="RADIO"/>
+            <column name="name" value="2. Результат вызова метода work()?"/>
+            <column name="text"
+                    value="&lt;code&gt;private void work(){ try{ work(); } finally { work(); }}&lt;/code&gt;"/>
+        </insert>
+
+        <insert tableName="question">
+            <column name="type" value="RADIO"/>
+            <column name="name" value="3. Результат вызова метода work()?"/>
+            <column name="text"
+                    value="&lt;code&gt;private void work(){ try{ work(); } finally { work(); }}&lt;/code&gt;"/>
+        </insert>
+
+        <insert tableName="question">
+            <column name="type" value="RADIO"/>
+            <column name="name" value="4. Результат вызова метода work()?"/>
+            <column name="text"
+                    value="&lt;code&gt;private void work(){ try{ work(); } finally { work(); }}&lt;/code&gt;"/>
+        </insert>
+
+        <insert tableName="question">
+            <column name="type" value="RADIO"/>
+            <column name="name" value="5. Результат вызова метода work()?"/>
+            <column name="text"
+                    value="&lt;code&gt;private void work(){ try{ work(); } finally { work(); }}&lt;/code&gt;"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

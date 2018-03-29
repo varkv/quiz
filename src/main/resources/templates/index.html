@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Quiz</title>
+    <link rel="icon" href="images/favicon.ico" />
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="resources/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Icons -->
+    <link href="resources/assets/css/font-awesome.css" rel="stylesheet" />
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="resources/assets/css/style.css" rel="stylesheet" />
+    <link href="resources/css/style.css" rel="stylesheet" />
+    <link href="resources/css/progress.css" rel="stylesheet" />
+
+    <script src="resources/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="resources/assets/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//www.strictly-software.com/scripts/downloads/encoder.js"></script>
+
+    <script src="resources/js/sockjs.min.js"></script>
+    <script src="resources/js/stomp.min.js"></script>
+    <script src="resources/app/ws-wrapper.js"></script>
+    <script src="resources/app/quiz-timeline-panel.js"></script>
+
+</head>
+
+<body>
+    <noscript>
+        <h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable Javascript
+            and reload this page!</h2>
+    </noscript>
+    <nav class="navbar navbar-light bg-light sticky-top " style="z-index: 99999999;">
+        <div th:replace="fragments/user-header :: user-header"></div>
+
+        <span class="navbar-text">
+            Hello,
+            <span th:text="${userName}">Pete</span>
+            <a href="/logout">
+                <i class="fa fa-sign-out"></i>
+            </a>
+        </span>
+
+        <span th:if="${userName == 'admin'}">
+            <div th:replace="fragments/admin :: admin"></div>
+        </span>
+    </nav>
+    <div class="container-fluid" id="wrapper">
+        <div style="position:  relative;" class="row justify-content-md-center">
+            <div class="col col-lg-8">
+                <div th:replace="fragments/progress :: progress"></div>
+                <div th:replace="fragments/finish-overlay :: finish-overlay"></div>
+                <div th:replace="fragments/quiz-timeline :: quiz-timeline"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            hljs.configure({
+                useBR: true,
+                tabReplace: '    '
+            });
+
+            window.QuizTimeline.init();
+        })
+    </script>
+</body>
+
+</html>

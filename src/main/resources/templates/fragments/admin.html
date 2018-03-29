@@ -1,0 +1,22 @@
+<span th:fragment="admin">
+
+    <form class="form-inline float-right">
+        <button class="btn btn-sm btn-outline-secondary mr-2" type="button" data-admin="start">
+            <i class="fa fa-play"></i> Start</button>
+        <button class="btn btn-sm btn-outline-secondary mr-2" type="button" data-admin="showPrew">
+            <i class="fa fa-angle-left"></i> Previous</button>
+        <button class="btn btn-sm btn-outline-primary mr-2" type="button" data-admin="finish">
+            <i class="fa fa-flag"></i> Finish</button>
+        <button class="btn btn-sm btn-outline-success mr-2" type="button" data-admin="disable">
+            <i class="fa fa-paperclip"></i> Lock</button>
+        <button class="btn btn-sm btn-outline-success mr-2" type="button" data-admin="showNext">
+            <i class="fa fa-angle-right"></i> Next</button>
+    </form>
+
+    <script src="resources/app/admin-panel.js"></script>
+    <script>
+        $(document).ready(function () {
+            window.AdminPanel.init();
+        })
+    </script>
+</span>

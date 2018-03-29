@@ -1,0 +1,90 @@
+<div id="quiz-timeline" class="card col-md-12 align-self-center" th:fragment="quiz-timeline">
+    <div class="card-block">
+        <h3 class="card-title">Quiz</h3>
+        <h6 class="card-subtitle mb-2 text-muted">Show your best</h6>
+
+        <ul class="timeline">
+            <li>
+                <div class="timeline-badge primary" id="current-number-question-placement">
+                    <em class="fa fa-question"></em>
+                </div>
+
+                <div class="timeline-panel" style="position:  relative;">
+                    <div class="timeline-heading">
+                        <h5 class="timeline-title mt-2" data-quiz="name">Lorem ipsum</h5>
+                    </div>
+
+                    <div class="timeline-body">
+                        <div data-quiz="text" class="my-4"></div>
+                        <div data-quiz="answers"></div>
+
+                        <div data-quiz="link"></div>
+                    </div>
+                    <div data-quiz="correct"></div>
+
+                    <div id="question-overlay" class="question-overlay">
+                        <div class="sk-fading-circle">
+                            <div class="sk-circle1 sk-circle"></div>
+                            <div class="sk-circle2 sk-circle"></div>
+                            <div class="sk-circle3 sk-circle"></div>
+                            <div class="sk-circle4 sk-circle"></div>
+                            <div class="sk-circle5 sk-circle"></div>
+                            <div class="sk-circle6 sk-circle"></div>
+                            <div class="sk-circle7 sk-circle"></div>
+                            <div class="sk-circle8 sk-circle"></div>
+                            <div class="sk-circle9 sk-circle"></div>
+                            <div class="sk-circle10 sk-circle"></div>
+                            <div class="sk-circle11 sk-circle"></div>
+                            <div class="sk-circle12 sk-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="last-card">
+                <div class="timeline-badge" id="total-count-question-placement">
+                    <em class="fa fa-ellipsis-h"></em>
+                </div>
+
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h5 class="timeline-title mt-2">Dolor</h5>
+                    </div>
+
+                    <div class="timeline-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script id="quiz-form-checkbox-block" type="text/template">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" data-quiz-form-input-field=""/>
+                <span data-quiz-form-input-text="">Check me out</span>
+              </label>
+            </div>
+        </script>
+
+    <script id="quiz-form-radio-block" type="text/template">
+            <div class="form-check my-2">
+                <div class="col-12">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" value="option1" data-quiz-form-input-field=""/>
+                        <span data-quiz-form-input-text="">Check me out</span>
+                    </label>
+                </div>
+                <div class="row" style="display:none;" data-quiz-form-input-progress="">
+                    <div class="col-10">
+                        <div class="progress progress-custom">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="progress-label">75%</div>
+                    </div>
+                </div>
+            </div>
+        </script>
+</div>
